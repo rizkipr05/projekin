@@ -13,13 +13,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PROJEKIN | Digital Development Partner",
+  metadataBase: new URL("https://projekin.web.id"),
+  title: {
+    default: "PROJEKIN | Digital Development Partner & Joki Tugas IT",
+    template: "%s | PROJEKIN",
+  },
   description:
-    "Website & aplikasi profesional untuk UMKM, startup, dan bisnis Anda, serta pendampingan tugas IT & skripsi mahasiswa.",
+    "Jasa pembuatan website profesional, aplikasi mobile, company profile, serta pendampingan tugas IT & skripsi mahasiswa kilat & bergaransi.",
+  keywords: [
+    "PROJEKIN",
+    "Jasa Pembuatan Website",
+    "Jasa Web Dev",
+    "Joki Skripsi IT",
+    "Joki Tugas Koding",
+    "Jasa Website Murah",
+    "Laravel Next.js Web App",
+  ],
+  authors: [{ name: "PROJEKIN Team" }],
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
     apple: "/icon.svg",
+  },
+  openGraph: {
+    title: "PROJEKIN | Digital Development Partner & Joki Tugas IT",
+    description:
+      "Website & aplikasi profesional untuk UMKM, startup, dan bisnis Anda, serta pendampingan tugas IT & skripsi mahasiswa.",
+    url: "https://projekin.web.id",
+    siteName: "PROJEKIN",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PROJEKIN | Digital Development Partner & Joki Tugas IT",
+    description:
+      "Website & aplikasi profesional untuk UMKM, startup, dan bisnis Anda, serta pendampingan tugas IT & skripsi mahasiswa.",
   },
 };
 

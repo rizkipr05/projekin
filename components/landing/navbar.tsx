@@ -39,7 +39,7 @@ export function Navbar() {
     <>
       {/* ─── Top Sticky Navbar ─── */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#040316]/90 backdrop-blur-2xl text-white">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:py-5 sm:px-6 lg:px-8">
           <a href="#home" aria-label="PROJEKIN Home" className="transition hover:opacity-90 active:scale-95">
             <ProjekinBrandLogo />
           </a>

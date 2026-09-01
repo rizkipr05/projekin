@@ -829,7 +829,7 @@ export function Footer() {
 
 export function FloatingWhatsApp() {
   return (
-    <div className="fixed bottom-6 right-4 z-50 flex items-center animate-float-slow sm:bottom-6 sm:right-6">
+    <div className="fixed bottom-6 right-4 z-40 flex items-center animate-float-slow sm:bottom-6 sm:right-6">
       <a
         href="https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20diskusi%20dan%20konsultasi%20project."
         target="_blank"

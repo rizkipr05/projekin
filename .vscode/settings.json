@@ -1,0 +1,5 @@
+{
+  "totalTypeScript.hideHelpers": true,
+  "totalTypeScript.showHelpers": false,
+  "css.lint.unknownAtRules": "ignore"
+}

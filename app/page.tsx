@@ -3,13 +3,13 @@ import { Navbar } from "@/components/landing/navbar";
 import {
   CtaSection,
   FaqSection,
+  FloatingWhatsApp,
   Footer,
   PortfolioSection,
   PricingSection,
   ProcessSection,
   ProblemSection,
   ServicesSection,
-  TechStackSection,
   TestimonialsSection,
   WhyUsSection,
 } from "@/components/landing/sections";
@@ -26,12 +26,12 @@ export default function Home() {
         <PortfolioSection />
         <ProcessSection />
         <WhyUsSection />
-        <TechStackSection />
         <TestimonialsSection />
         <FaqSection />
         <CtaSection />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

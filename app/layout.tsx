@@ -15,7 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PROJEKIN | Digital Development Partner",
   description:
-    "Website & aplikasi profesional untuk UMKM, startup, dan bisnis Anda. Mulai dari Rp500 ribuan.",
+    "Website & aplikasi profesional untuk UMKM, startup, dan bisnis Anda, serta pendampingan tugas IT & skripsi mahasiswa.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

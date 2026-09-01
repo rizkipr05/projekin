@@ -1,165 +1,245 @@
-
 function StatCard({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3 shadow-[0_10px_30px_rgba(15,23,42,0.03)] backdrop-blur-sm">
-      <div className="text-xl font-bold text-slate-950">{value}</div>
-      <div className="text-xs text-slate-500">{label}</div>
+    <div className="group rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 backdrop-blur-xl transition-all duration-300 hover:border-indigo-500/40 hover:bg-white/[0.06] hover:shadow-[0_15px_30px_rgba(99,102,241,0.15)]">
+      <div className="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-indigo-300 transition">{value}</div>
+      <div className="text-xs font-medium text-slate-400 mt-1">{label}</div>
     </div>
   );
 }
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden py-12 sm:py-16 lg:py-20">
-      <div className="absolute inset-x-0 top-0 -z-10 mx-auto h-[500px] w-[1200px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(79,70,229,0.12),_transparent_60%)] blur-3xl" />
+    <section id="home" className="relative overflow-hidden bg-[#040316] py-16 text-white sm:py-24 lg:py-28 bg-grid-pattern">
+      {/* Ambient Lighting & Glow Effects */}
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[35rem] w-[50rem] rounded-full bg-gradient-to-tr from-indigo-600/25 via-purple-600/20 to-cyan-400/15 blur-[140px] animate-float-slow" />
+      <div className="pointer-events-none absolute top-1/3 -right-20 h-80 w-80 rounded-full bg-indigo-500/10 blur-[100px] animate-float-reverse" />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+        {/* Left Hero Content */}
         <div className="max-w-xl">
-          <div className="mb-6 inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-700 shadow-sm">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.2)] backdrop-blur-md animate-pulse-glow">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+            </span>
             DIGITAL DEVELOPMENT PARTNER
           </div>
 
-          <h1 className="text-4xl font-black leading-[1.05] tracking-[-0.06em] text-slate-950 sm:text-5xl lg:text-7xl">
+          <h1 className="text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
             Punya Ide Digital?
-            <span className="mt-2 block text-slate-700">Kami Wujudkan.</span>
+            <span className="mt-2 block bg-gradient-to-r from-indigo-300 via-purple-200 to-cyan-300 bg-clip-text text-transparent">
+              Kami Wujudkan.
+            </span>
           </h1>
 
-          <p className="mt-6 max-w-lg text-base leading-8 text-slate-600 sm:text-lg">
-            Bangun website dan aplikasi profesional untuk bisnis Anda tanpa harus mengeluarkan budget besar.
+          <p className="mt-6 max-w-lg text-base leading-8 text-slate-300 sm:text-lg">
+            Bangun website & aplikasi kustom berstandar tinggi untuk bisnis Anda, serta layanan Joki Tugas IT, Skripsi, & Project Koding terpercaya.
           </p>
 
-          <div className="mt-7 inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700">
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-indigo-600" />
-            Mulai Rp500 Ribuan
+          <div className="mt-6 flex flex-wrap gap-2">
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-xs font-bold text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.2)] transition hover:scale-105">
+              <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
+              Mulai Rp 500 Ribuan • Free Domain & Hosting
+            </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-xs font-bold text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.2)] transition hover:scale-105">
+              <span className="flex h-2 w-2 rounded-full bg-indigo-400 animate-pulse" />
+              Garansi 3x Revisi Gratis
+            </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2 text-xs font-bold text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.2)] transition hover:scale-105">
+              <span className="flex h-2 w-2 rounded-full bg-purple-400 animate-pulse" />
+              🎓 Joki Tugas IT, Skripsi & TA
+            </div>
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
               href="https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis."
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_18px_35px_rgba(15,23,42,0.18)] transition hover:-translate-y-0.5 hover:bg-slate-800"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-indigo-500 px-7 py-4 text-sm font-black uppercase tracking-wider text-white shadow-[0_0_30px_rgba(99,102,241,0.4)] transition-all duration-300 hover:scale-105 hover:from-indigo-500 hover:to-indigo-400 hover:shadow-[0_0_45px_rgba(99,102,241,0.7)]"
             >
-              Konsultasi Gratis
+              Konsultasi Gratis <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
             <a
               href="#portfolio"
-              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-50"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-7 py-4 text-sm font-bold text-white backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:border-white/30 hover:bg-white/[0.08]"
             >
               Lihat Portfolio
             </a>
           </div>
-
-          <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-slate-600">
-            <span className="rounded-full border border-slate-200 bg-white px-3 py-1.5">Website & Aplikasi</span>
-            <span className="rounded-full border border-slate-200 bg-white px-3 py-1.5">Affordable Pricing</span>
-            <span className="rounded-full border border-slate-200 bg-white px-3 py-1.5">Support After Launch</span>
-          </div>
         </div>
 
-        <div className="relative">
-          <div className="rounded-[2rem] border border-slate-200 bg-white/80 p-3 shadow-[0_35px_80px_rgba(15,23,42,0.12)] backdrop-blur-sm">
-            <div className="rounded-[1.5rem] border border-slate-200 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 p-4 text-white">
-              <div className="mb-4 flex items-center justify-between">
-                <div className="flex gap-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                </div>
-                <span className="rounded-full bg-white/10 px-2 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-slate-200">
-                  Dashboard
-                </span>
+        {/* Right Dual Device Mockup (MacBook Laptop + Realistic iPhone Smartphone) */}
+        <div className="relative pt-6 pb-12 sm:py-0">
+          {/* Ambient Glow behind Devices */}
+          <div className="pointer-events-none absolute -inset-6 rounded-[3.5rem] bg-gradient-to-tr from-indigo-500/25 via-purple-500/20 to-cyan-500/15 blur-3xl animate-pulse-slow" />
+
+          {/* Laptop Container (MacBook Style) */}
+          <div className="relative mx-auto max-w-lg sm:max-w-xl">
+            {/* Laptop Screen Frame */}
+            <div className="relative rounded-t-[1.8rem] border-4 border-slate-700/80 bg-slate-950 p-2.5 sm:p-3.5 shadow-[0_30px_90px_rgba(0,0,0,0.85)] backdrop-blur-2xl">
+              {/* Laptop Camera Notch & Sensor */}
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-30">
+                <span className="h-1.5 w-1.5 rounded-full bg-slate-800 border border-slate-700" />
+                <span className="h-1 w-1 rounded-full bg-emerald-500/80 animate-pulse" />
               </div>
 
-              <div className="grid gap-4 md:grid-cols-[1.2fr_0.8fr]">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <div className="mb-3 flex items-center justify-between">
-                    <div>
-                      <p className="text-[10px] uppercase tracking-[0.18em] text-slate-300">Performance</p>
-                      <p className="mt-1 text-2xl font-bold">+42%</p>
-                    </div>
-                    <div className="rounded-xl bg-indigo-500/20 px-2 py-1 text-xs text-indigo-200">Growth</div>
+              {/* Laptop Display Content */}
+              <div className="overflow-hidden rounded-xl border border-white/10 bg-slate-950 text-white pt-3.5 shadow-2xl">
+                {/* Browser Address Bar */}
+                <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.03] px-3.5 py-2 text-xs">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
                   </div>
-                  <div className="space-y-2">
-                    {[52, 70, 46, 84, 96].map((h, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <span className="w-6 text-[10px] text-slate-300">{i + 1}</span>
-                        <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/10">
-                          <div className="h-full rounded-full bg-gradient-to-r from-indigo-400 to-cyan-300" style={{ width: `${h}%` }} />
-                        </div>
-                      </div>
-                    ))}
+                  <div className="flex items-center gap-2 rounded-md border border-white/10 bg-slate-900/90 px-3.5 py-0.5 text-[10px] font-mono text-slate-300 shadow-inner">
+                    <span className="text-emerald-400">https://</span>projekin.id
+                  </div>
+                  <div className="flex items-center gap-1.5 text-[10px] font-black uppercase text-indigo-300 tracking-wider">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping" />
+                    <span>LIVE ENGINE</span>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-slate-300">
-                      <span>Sales</span>
-                      <span>Live</span>
+                {/* Simulated Live Web App View */}
+                <div className="p-4 sm:p-5 space-y-4 bg-gradient-to-b from-indigo-950/50 via-slate-950 to-slate-950">
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm font-extrabold tracking-tight text-white flex items-center gap-1.5">
+                      <span className="text-indigo-400">Projek</span><span className="text-purple-400">in</span>
                     </div>
-                    <div className="mt-4 text-3xl font-bold">Rp24M</div>
-                    <div className="mt-4 h-12 rounded-xl bg-gradient-to-r from-cyan-400/30 via-indigo-400/20 to-transparent p-1">
-                      <div className="flex h-full items-end gap-1">
-                        {[18, 32, 20, 46, 58, 72, 80].map((bar, idx) => (
-                          <span key={idx} className="flex-1 rounded-t-lg bg-gradient-to-t from-indigo-400 to-cyan-300" style={{ height: `${bar}%` }} />
-                        ))}
+                    <span className="rounded-full bg-indigo-500/20 px-2.5 py-0.5 text-[9px] font-bold text-indigo-300 border border-indigo-500/30">
+                      High-Performance App
+                    </span>
+                  </div>
+
+                  <div className="rounded-2xl border border-indigo-500/30 bg-gradient-to-r from-indigo-950/70 to-slate-900/90 p-4 shadow-xl">
+                    <div className="text-[10px] font-black uppercase tracking-wider text-indigo-400">LIVE PREVIEW STATUS</div>
+                    <div className="mt-1 text-base sm:text-lg font-black text-white">Custom Web & Mobile Development</div>
+                    <div className="mt-3 grid grid-cols-3 gap-2 text-center">
+                      <div className="rounded-xl bg-white/5 p-2 border border-white/10">
+                        <div className="text-[9px] text-slate-400 font-medium">PageSpeed</div>
+                        <div className="text-xs sm:text-sm font-black text-emerald-400">100/100</div>
+                      </div>
+                      <div className="rounded-lg bg-white/5 p-2 border border-white/10">
+                        <div className="text-[9px] text-slate-400 font-medium">Load Time</div>
+                        <div className="text-xs sm:text-sm font-black text-cyan-300">0.4s</div>
+                      </div>
+                      <div className="rounded-lg bg-white/5 p-2 border border-white/10">
+                        <div className="text-[9px] text-slate-400 font-medium">SEO Score</div>
+                        <div className="text-xs sm:text-sm font-black text-purple-300">Optimal</div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-slate-300">
-                      <span>Mobile</span>
-                      <span>App</span>
+                  <div className="grid grid-cols-2 gap-2 text.xs">
+                    <div className="rounded-xl border border-white/10 bg-white/5 p-2.5 flex items-center justify-between">
+                      <span className="text-[11px] text-slate-300 font-bold">✨ UI/UX Kustom</span>
+                      <span className="text-emerald-400 font-bold text-xs">✓</span>
                     </div>
-                    <div className="mt-4 rounded-[1.25rem] bg-slate-900 p-3 shadow-inner shadow-slate-950/30">
-                      <div className="mx-auto h-24 w-14 rounded-[1.2rem] border border-slate-700 bg-gradient-to-b from-slate-800 to-slate-950 p-2">
-                        <div className="mx-auto mb-2 h-1.5 w-7 rounded-full bg-slate-500" />
-                        <div className="space-y-2">
-                          <div className="h-7 rounded-lg bg-indigo-500/80" />
-                          <div className="h-14 rounded-lg bg-gradient-to-b from-cyan-400/80 to-indigo-500/80" />
-                        </div>
-                      </div>
+                    <div className="rounded-xl border border-white/10 bg-white/5 p-2.5 flex items-center justify-between">
+                      <span className="text-[11px] text-slate-300 font-bold">⚡ Clean Code</span>
+                      <span className="text-emerald-400 font-bold text-xs">✓</span>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Laptop Base Chassis & Hinge */}
+            <div className="relative mx-auto h-3.5 w-[106%] -ml-[3%] rounded-b-2xl bg-gradient-to-r from-slate-700 via-slate-500 to-slate-700 border-t border-slate-500/60 shadow-[0_20px_40px_rgba(0,0,0,0.8)] flex justify-center">
+              <div className="h-1.5 w-20 rounded-b-md bg-slate-800 border-x border-b border-slate-600/70" />
             </div>
           </div>
 
-          <div className="absolute -left-4 bottom-8 w-40 rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_18px_35px_rgba(15,23,42,0.1)] sm:-left-8">
-            <div className="mb-2 flex items-center justify-between">
-              <span className="text-[10px] uppercase tracking-[0.18em] text-slate-400">UI Kit</span>
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-            </div>
-            <div className="space-y-2">
-              <div className="h-3 rounded-full bg-slate-200" />
-              <div className="h-10 rounded-xl bg-gradient-to-r from-indigo-500 to-cyan-400" />
-              <div className="h-3 w-2/3 rounded-full bg-slate-200" />
+          {/* Ultra-Realistic iPhone Smartphone Mockup (Floating & Overlapping Bottom Right) */}
+          <div className="absolute -bottom-6 right-0 sm:-right-6 w-44 sm:w-52 rounded-[2.6rem] border-[6px] border-slate-700/90 bg-slate-950 p-2.5 shadow-[0_30px_70px_rgba(0,0,0,0.9),0_0_40px_rgba(99,102,241,0.25)] backdrop-blur-2xl z-20 transition-transform duration-300 hover:scale-105 animate-float-slow">
+            {/* Side Hardware Buttons */}
+            <span className="absolute -left-[8px] top-14 h-8 w-[3px] rounded-l-md bg-slate-600/80" />
+            <span className="absolute -left-[8px] top-24 h-8 w-[3px] rounded-l-md bg-slate-600/80" />
+            <span className="absolute -right-[8px] top-16 h-12 w-[3px] rounded-r-md bg-slate-600/80" />
+
+            {/* Phone Inner Display Container */}
+            <div className="overflow-hidden rounded-[2.1rem] border border-white/10 bg-slate-950 text-white flex flex-col justify-between min-h-[320px] sm:min-h-[360px] shadow-inner relative">
+              
+              {/* Dynamic Island Notch */}
+              <div className="pt-2 px-3 flex items-center justify-between text-[8px] text-slate-400 font-medium z-30">
+                <span>09:41</span>
+                {/* Dynamic Island Pill */}
+                <div className="h-3.5 w-16 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-between px-2 shadow-sm">
+                  <span className="h-1.5 w-1.5 rounded-full bg-slate-700" />
+                  <span className="h-1 w-1 rounded-full bg-indigo-400/80 animate-pulse" />
+                </div>
+                <div className="flex items-center gap-1">
+                  <span>5G</span>
+                  <span className="inline-block h-2 w-3 rounded-sm border border-slate-400 p-0.5">
+                    <span className="block h-full w-full bg-emerald-400 rounded-xs" />
+                  </span>
+                </div>
+              </div>
+
+              {/* Mobile Screen App UI */}
+              <div className="p-3 space-y-2.5 my-auto">
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <div className="text-[10px] font-black text-white flex items-center gap-1">
+                    <span className="text-indigo-400">Projek</span><span className="text-purple-400">in</span>
+                  </div>
+                  <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[8px] font-extrabold text-emerald-300 border border-emerald-500/30">
+                    Active
+                  </span>
+                </div>
+
+                <div className="rounded-xl bg-gradient-to-br from-indigo-950/80 via-slate-900 to-purple-950/80 p-2.5 text-center border border-indigo-500/30 shadow-lg">
+                  <div className="text-[10px] font-black text-white">100% Mobile Responsive</div>
+                  <p className="mt-1 text-[8px] text-slate-300 leading-tight">Solusi Digital Cepat & Sleek di HP</p>
+                  <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-2 py-0.5 text-[8px] font-extrabold text-emerald-300 border border-emerald-500/30">
+                    <span className="h-1 w-1 rounded-full bg-emerald-400 animate-ping" />
+                    <span>Instant Load 0.4s</span>
+                  </div>
+                </div>
+
+                <div className="space-y-1.5 text-[9px]">
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-2 flex items-center justify-between">
+                    <span className="text-slate-300 font-semibold">📱 Mobile Native UI</span>
+                    <span className="text-emerald-400 font-black">✓</span>
+                  </div>
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-2 flex items-center justify-between">
+                    <span className="text-slate-300 font-semibold">⚡ Fast Performance</span>
+                    <span className="text-emerald-400 font-black">✓</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom iOS Home Indicator Pill */}
+              <div className="pb-2 text-center">
+                <div className="mx-auto h-1 w-20 rounded-full bg-white/30" />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-[2rem] border border-slate-200 bg-white/80 p-5 shadow-[0_18px_35px_rgba(15,23,42,0.04)] backdrop-blur-sm">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <div className="text-sm font-semibold text-slate-500">Dipercaya untuk membangun berbagai kebutuhan digital</div>
+      {/* Trust & Stats Footer Banner */}
+      <div className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-6 backdrop-blur-xl shadow-2xl">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between border-b border-white/10 pb-6 mb-6">
+            <div className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400">
+              SOLUSI DIGITAL TERPERCAYA UNTUK BISNIS & MAHASISWA
+            </div>
             <div className="flex flex-wrap gap-2">
-              {['UMKM', 'Startup', 'Personal Brand', 'Company', 'Online Store'].map((item) => (
-                <span key={item} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700">
+              {["UMKM Modern", "Startup", "Personal Brand", "Enterprise", "Tugas IT & Skripsi"].map((item) => (
+                <span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs font-semibold text-slate-300">
                   {item}
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <StatCard value="50+ Project" label="Telah dibangun" />
-            <StatCard value="4+ Layanan" label="Solusi digital" />
-            <StatCard value="100% Responsive" label="Semua perangkat" />
-            <StatCard value="Support" label="After launch" />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <StatCard value="Fast Delivery" label="Pengerjaan Kilat 3-7 Hari Kerja" />
+            <StatCard value="Harga Terjangkau" label="Mulai Rp 500rb & Promo Rilis" />
+            <StatCard value="100% Responsive" label="Tampilan Rapi di HP & Desktop" />
+            <StatCard value="Garansi Support" label="Free 3x Revisi & Pendampingan" />
           </div>
         </div>
       </div>

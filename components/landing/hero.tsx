@@ -53,7 +53,7 @@ export function Hero() {
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
-              href="https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis."
+              href="https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis."
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-indigo-500 px-7 py-4 text-sm font-black uppercase tracking-wider text-white shadow-[0_0_30px_rgba(99,102,241,0.4)] transition-all duration-300 hover:scale-105 hover:from-indigo-500 hover:to-indigo-400 hover:shadow-[0_0_45px_rgba(99,102,241,0.7)]"
@@ -94,7 +94,7 @@ export function Hero() {
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
                   </div>
                   <div className="flex items-center gap-2 rounded-md border border-white/10 bg-slate-900/90 px-3.5 py-0.5 text-[10px] font-mono text-slate-300 shadow-inner">
-                    <span className="text-emerald-400">https://</span>projekin.id
+                    <span className="text-emerald-400">https://</span>projekin.web.id
                   </div>
                   <div className="flex items-center gap-1.5 text-[10px] font-black uppercase text-indigo-300 tracking-wider">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping" />

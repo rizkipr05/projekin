@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { ProjekinBrandLogo } from "./icons";
 
 const mobileNavItems = [
-  { name: "Home", href: "#home", icon: "🏠", badge: null },
-  { name: "Layanan", href: "#layanan", icon: "⚡", badge: "Bisnis & IT" },
-  { name: "Paket & Biaya", href: "#paket", icon: "💎", badge: "Promo" },
-  { name: "Portfolio", href: "#portfolio", icon: "🎨", badge: "Showcase" },
-  { name: "Testimonial", href: "#testimonial", icon: "⭐", badge: "Review" },
-  { name: "FAQ", href: "#faq", icon: "❓", badge: "Tanya Jawab" },
+  { name: "Home", href: "#home", badge: null },
+  { name: "Layanan", href: "#layanan", badge: "Bisnis & IT" },
+  { name: "Paket & Biaya", href: "#paket", badge: "Promo" },
+  { name: "Portfolio", href: "#portfolio", badge: "Showcase" },
+  { name: "Testimonial", href: "#testimonial", badge: "Review" },
+  { name: "FAQ", href: "#faq", badge: "Tanya Jawab" },
 ];
 
 export function Navbar() {
@@ -61,7 +61,7 @@ export function Navbar() {
           {/* Actions */}
           <div className="flex items-center gap-2.5">
             <a
-              href="https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis."
+              href="https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis."
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-[0_0_20px_rgba(99,102,241,0.4)] transition duration-300 hover:scale-105 sm:px-5 sm:py-2.5"
@@ -130,10 +130,7 @@ export function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="group flex items-center justify-between rounded-xl border border-white/[0.07] bg-white/[0.04] px-4 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:border-indigo-500/50 hover:bg-indigo-600/20 active:scale-[0.98]"
                 >
-                  <span className="flex items-center gap-3">
-                    <span className="text-base leading-none">{item.icon}</span>
-                    <span className="group-hover:text-indigo-300 transition-colors">{item.name}</span>
-                  </span>
+                  <span className="group-hover:text-indigo-300 transition-colors">{item.name}</span>
                   {item.badge ? (
                     <span className="rounded-full bg-indigo-500/20 px-2 py-0.5 text-[9px] font-extrabold text-indigo-300 border border-indigo-500/30">
                       {item.badge}
@@ -159,7 +156,7 @@ export function Navbar() {
             </span>
           </div>
           <a
-            href="https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis."
+            href="https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis."
             target="_blank"
             rel="noreferrer"
             onClick={() => setIsOpen(false)}

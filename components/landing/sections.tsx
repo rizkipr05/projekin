@@ -184,7 +184,7 @@ export function ServicesSection() {
 
             <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-white/10">
               <a
-                href={`https://wa.me/6281234567890?text=${activeServiceModal.waMessage}`}
+                href={`https://wa.me/6285766935413?text=${activeServiceModal.waMessage}`}
                 target="_blank"
                 rel="noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 rounded-full bg-emerald-600 px-6 py-3.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_0_20px_rgba(16,185,129,0.4)] transition hover:bg-emerald-500 hover:scale-105"
@@ -355,7 +355,7 @@ export function PortfolioSection() {
             </p>
           </div>
           <a
-            href="https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20mengenai%20project%20saya."
+            href="https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20mengenai%20project%20saya."
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-indigo-300 transition hover:text-white"
@@ -755,7 +755,7 @@ export function CtaSection() {
         </p>
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
           <a
-            href="https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis%20mengenai%20projek%20saya."
+            href="https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis%20mengenai%20projek%20saya."
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-indigo-500 px-8 py-4 text-xs font-black uppercase tracking-wider text-white shadow-[0_0_35px_rgba(99,102,241,0.5)] transition-all duration-300 hover:scale-110 hover:from-indigo-500 hover:to-indigo-400 hover:shadow-[0_0_50px_rgba(99,102,241,0.8)]"
@@ -811,7 +811,7 @@ export function Footer() {
         <div>
           <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white">Hubungi Kami</h3>
           <div className="mt-4 space-y-3 text-xs sm:text-sm">
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noreferrer" className="block transition-colors duration-200 hover:text-indigo-300">+62 812-3456-7890</a>
+            <a href="https://wa.me/6285766935413" target="_blank" rel="noreferrer" className="block transition-colors duration-200 hover:text-indigo-300">+62 857-6693-5413</a>
             <a href="mailto:hello@projekin.id" className="block transition-colors duration-200 hover:text-indigo-300">hello@projekin.id</a>
             <a href="https://instagram.com" target="_blank" rel="noreferrer" className="block transition-colors duration-200 hover:text-indigo-300">@projekin.id</a>
           </div>
@@ -829,9 +829,9 @@ export function Footer() {
 
 export function FloatingWhatsApp() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center animate-float-slow">
+    <div className="fixed bottom-6 right-4 z-50 flex items-center animate-float-slow sm:bottom-6 sm:right-6">
       <a
-        href="https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20diskusi%20dan%20konsultasi%20project."
+        href="https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20diskusi%20dan%20konsultasi%20project."
         target="_blank"
         rel="noreferrer"
         className="group relative flex items-center gap-3 rounded-full border border-white/20 bg-slate-950/90 p-1.5 pl-5 shadow-[0_20px_40px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:border-emerald-500/60 hover:bg-slate-950 hover:shadow-[0_25px_50px_rgba(16,185,129,0.3)]"

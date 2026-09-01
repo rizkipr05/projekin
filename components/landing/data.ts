@@ -125,7 +125,7 @@ export const agencyPricingPlans = [
       "Garansi Technical Support",
     ],
     cta: "Mulai Sekarang",
-    ctaHref: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20mulai%20paket%20Starter.",
+    ctaHref: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20mulai%20paket%20Starter.",
     highlight: false,
   },
   {
@@ -144,7 +144,7 @@ export const agencyPricingPlans = [
       "Garansi Maintenance & Support",
     ],
     cta: "Mulai Sekarang",
-    ctaHref: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20paket%20Business.",
+    ctaHref: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20paket%20Business.",
     highlight: true,
   },
   {
@@ -163,7 +163,7 @@ export const agencyPricingPlans = [
       "Panduan & Technical Support",
     ],
     cta: "Mulai Sekarang",
-    ctaHref: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20paket%20CMS.",
+    ctaHref: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20paket%20CMS.",
     highlight: false,
   },
   {
@@ -182,7 +182,7 @@ export const agencyPricingPlans = [
       "Garansi Technical Support",
     ],
     cta: "Mulai Sekarang",
-    ctaHref: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20paket%20Online%20Store.",
+    ctaHref: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20paket%20Online%20Store.",
     highlight: false,
   },
   {
@@ -201,7 +201,7 @@ export const agencyPricingPlans = [
       "Dedicated Support 24/7",
     ],
     cta: "Konsultasi Project",
-    ctaHref: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20project%20custom.",
+    ctaHref: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20project%20custom.",
     highlight: false,
   },
 ];
@@ -223,7 +223,7 @@ export const studentPricingPlans = [
       "Privasi Identitas Mahasiswa 100% Terjaga",
     ],
     cta: "Joki Tugas Basic",
-    ctaHref: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20joki%20tugas%20koding%20basic.",
+    ctaHref: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20joki%20tugas%20koding%20basic.",
     highlight: false,
   },
   {
@@ -241,7 +241,7 @@ export const studentPricingPlans = [
       "Video Tutorial Penjelasan Program & Cara Install",
     ],
     cta: "Joki Project Web/App",
-    ctaHref: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20joki%20project%20web%2Fmobile%20kuliah.",
+    ctaHref: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20joki%20project%20web%2Fmobile%20kuliah.",
     highlight: true,
   },
   {
@@ -259,7 +259,7 @@ export const studentPricingPlans = [
       "Dukungan Persiapan Pertanyaan Dosen Penguji Sidang",
     ],
     cta: "Konsultasi Skripsi IT",
-    ctaHref: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20joki%20skripsi%20%2F%20tugas%20akhir%20IT.",
+    ctaHref: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20joki%20skripsi%20%2F%20tugas%20akhir%20IT.",
     highlight: false,
   },
 ];
@@ -274,7 +274,7 @@ export const projectCards = [
     badge: "Free Domain & Hosting",
     tech: ["Next.js", "Tailwind CSS", "Laravel", "SEO"],
     color: "from-indigo-600/30 via-purple-600/20 to-cyan-500/10",
-    href: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20pembuatan%20Website%20Bisnis.",
+    href: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20pembuatan%20Website%20Bisnis.",
   },
   {
     name: "Skripsi & Project Akhir IT",
@@ -283,7 +283,7 @@ export const projectCards = [
     badge: "Laporan + Full Source Code",
     tech: ["Laravel", "Python", "MySQL", "UML/ERD"],
     color: "from-purple-600/30 via-pink-600/20 to-indigo-500/10",
-    href: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20Skripsi%20%2F%20TA%20IT.",
+    href: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20Skripsi%20%2F%20TA%20IT.",
   },
   {
     name: "Mobile App & System Dashboard",
@@ -292,7 +292,7 @@ export const projectCards = [
     badge: "Android & iOS Native",
     tech: ["React Native", "Flutter", "Node.js", "REST API"],
     color: "from-cyan-600/30 via-blue-600/20 to-emerald-500/10",
-    href: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20Aplikasi%20Mobile%20%2F%20Dashboard.",
+    href: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20Aplikasi%20Mobile%20%2F%20Dashboard.",
   },
   {
     name: "Project UTS/UAS & Praktikum Koding",
@@ -301,7 +301,7 @@ export const projectCards = [
     badge: "Express 1-2 Hari",
     tech: ["C++", "Java", "Python", "PHP"],
     color: "from-emerald-600/30 via-teal-600/20 to-cyan-500/10",
-    href: "https://wa.me/6281234567890?text=Halo%20PROJEKIN%2C%20saya%20ingin%20joki%20Project%20UTS%2FUAS%20%2F%20Praktikum.",
+    href: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20joki%20Project%20UTS%2FUAS%20%2F%20Praktikum.",
   },
 ];
 

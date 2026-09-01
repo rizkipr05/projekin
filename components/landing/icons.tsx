@@ -185,11 +185,11 @@ export function ProjekinTechIcon({ className = "h-5 w-5" }: IconProps) {
 
 export function ProjekinBrandLogo({ className = "" }: IconProps) {
   return (
-    <div className={`flex items-center gap-2.5 group ${className}`}>
-      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-950/60 border border-purple-500/40 text-purple-300 shadow-[0_0_15px_rgba(192,132,252,0.3)] transition duration-300 group-hover:scale-105 group-hover:border-purple-400 group-hover:shadow-[0_0_22px_rgba(192,132,252,0.5)]">
-        <ProjekinTechIcon className="h-5 w-5 text-purple-300" />
+    <div className={`flex items-center gap-3 group ${className}`}>
+      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-purple-950/60 border border-purple-500/40 text-purple-300 shadow-[0_0_15px_rgba(192,132,252,0.3)] transition duration-300 group-hover:scale-105 group-hover:border-purple-400 group-hover:shadow-[0_0_22px_rgba(192,132,252,0.5)]">
+        <ProjekinTechIcon className="h-6 w-6 text-purple-300" />
       </div>
-      <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-white transition duration-200 group-hover:opacity-90">
+      <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white transition duration-200 group-hover:opacity-90">
         Projek<span className="text-purple-400 font-black">in</span>
       </span>
     </div>

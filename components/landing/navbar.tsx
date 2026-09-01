@@ -44,8 +44,7 @@ export function Navbar() {
             <ProjekinBrandLogo />
           </a>
 
-          {/* Desktop Links */}
-          <div className="hidden items-center gap-7 text-sm font-semibold text-slate-300 md:flex">
+          <div className="hidden items-center gap-8 text-sm font-semibold text-slate-300 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -62,7 +61,7 @@ export function Navbar() {
               href="https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis."
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-[0_0_20px_rgba(99,102,241,0.4)] transition duration-300 hover:scale-105 sm:px-5 sm:py-2.5"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-white shadow-[0_0_20px_rgba(99,102,241,0.4)] transition duration-300 hover:scale-105 sm:px-6 sm:py-3"
             >
               Konsultasi <span className="ml-1">→</span>
             </a>

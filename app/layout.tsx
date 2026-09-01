@@ -50,6 +50,9 @@ export const metadata: Metadata = {
     description:
       "Website & aplikasi profesional untuk UMKM, startup, dan bisnis Anda, serta pendampingan tugas IT & skripsi mahasiswa.",
   },
+  verification: {
+    google: "google3e7ca20e960ef147",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

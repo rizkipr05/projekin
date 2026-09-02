@@ -413,7 +413,7 @@ export function PortfolioSection() {
 
 export function ProcessSection() {
   return (
-    <section className="relative overflow-hidden bg-[#060420] py-24 text-white rounded-t-[3.5rem] sm:rounded-t-[5rem]">
+    <section id="proses" className="relative overflow-hidden bg-[#060420] py-24 text-white rounded-t-[3.5rem] sm:rounded-t-[5rem]">
       {/* Background Radial Glow */}
       <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[30rem] w-[45rem] rounded-full bg-gradient-to-b from-indigo-600/20 via-purple-600/10 to-transparent blur-[140px]" />
 
@@ -588,7 +588,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#040316] py-24 text-white border-t border-white/10">
+    <section id="testimonial" className="relative overflow-hidden bg-[#040316] py-24 text-white border-t border-white/10">
       {/* Grid pattern background */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
 

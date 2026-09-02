@@ -7,6 +7,7 @@ const navItems = [
   { name: "Home", href: "#home" },
   { name: "Layanan", href: "#layanan" },
   { name: "Paket & Biaya", href: "#paket" },
+  { name: "Portfolio", href: "#portfolio" },
   { name: "Testimonial", href: "#testimonial" },
   { name: "FAQ", href: "#faq" },
 ];

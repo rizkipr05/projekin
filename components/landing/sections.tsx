@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { 
   ArrowIcon, 
@@ -844,5 +845,44 @@ export function FloatingWhatsApp() {
         </span>
       </a>
     </div>
+  );
+}
+
+export function ClientLogosSection() {
+  const clients = [
+    { name: "Hempart Indonesia", src: "/clients/1.png" },
+    { name: "PROTEK Programming Teknokrat", src: "/clients/2.jpg" },
+    { name: "Client 3", src: "/clients/3.png" },
+  ];
+  // Triple for seamless infinite loop
+  const items = [...clients, ...clients, ...clients];
+
+  return (
+    <section className="relative overflow-hidden border-y border-white/[0.06] bg-[#040316] py-8">
+      {/* Fade edges */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#040316] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#040316] to-transparent" />
+
+      <p className="mb-6 text-center text-[10px] font-black uppercase tracking-[0.25em] text-slate-500">
+        Dipercaya Oleh Klien &amp; Project Nyata
+      </p>
+
+      <div className="flex animate-marquee gap-10">
+        {items.map((client, i) => (
+          <div
+            key={i}
+            className="flex h-14 w-40 shrink-0 items-center justify-center rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-2 transition duration-300 hover:border-white/20 hover:bg-white/[0.07]"
+          >
+            <Image
+              src={client.src}
+              alt={client.name}
+              width={130}
+              height={48}
+              className="h-full w-auto max-h-10 object-contain grayscale opacity-55 transition duration-300 hover:grayscale-0 hover:opacity-100"
+            />
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

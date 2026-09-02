@@ -107,6 +107,16 @@ img {
   animation: floatReverse 7s ease-in-out infinite;
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.animate-marquee {
+  animation: marquee 18s linear infinite;
+  will-change: transform;
+}
+
 .animate-pulse-glow {
   animation: pulseGlow 3s ease-in-out infinite;
 }

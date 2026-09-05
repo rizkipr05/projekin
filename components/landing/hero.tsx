@@ -22,7 +22,7 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
             </span>
-            DIGITAL DEVELOPMENT PARTNER
+            SOLUSI DIGITAL
           </div>
 
           <h1 className="text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">

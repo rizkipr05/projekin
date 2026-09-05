@@ -821,7 +821,7 @@ export function Footer() {
 
       <div className="relative border-t border-white/10 bg-[#010108]">
         <div className="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-slate-400 sm:px-6 lg:px-8">
-          © 2026 PROJEKIN. All rights reserved. Ultra-Premium Digital Development Partner.
+          © 2026 PROJEKIN. All rights reserved. Solusi Digital & Joki Tugas IT.
         </div>
       </div>
     </footer>

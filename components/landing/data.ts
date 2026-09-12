@@ -28,7 +28,7 @@ export const serviceItems = [
       "Optimasi SEO Google & Cepat Diakses di HP/Desktop",
       "Fitur Form Kontak & Tombol WhatsApp CTA Direct",
       "Integrasi CMS / Dashboard Admin untuk Edit Konten (Opsional)",
-      "Garansi 3x Revisi Gratis & Support Pendampingan Teknis",
+      "Garansi 5x Revisi Gratis & Free Maintenance 3 Bulan",
     ],
     tech: ["Next.js", "React", "Tailwind CSS", "Laravel", "Node.js"],
     waMessage: "Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20detail%20mengenai%20jasa%20Web%20Development.",
@@ -116,7 +116,7 @@ export const agencyPricingPlans = [
     tag: null,
     features: [
       "Free Domain & Hosting (1 Thn)",
-      "Garansi 3x-4x Revisi Gratis",
+      "Garansi 5x Revisi Gratis",
       "1 Landing Page Responsive",
       "Informasi Bisnis & Layanan",
       "Tombol WhatsApp CTA Direct",
@@ -135,13 +135,13 @@ export const agencyPricingPlans = [
     tag: "Recommended",
     features: [
       "Free Domain & Hosting (1 Thn)",
-      "Garansi 3x Revisi Gratis",
+      "Garansi 5x Revisi Gratis & Maintenance 3 Bulan",
       "Multi-page Website (Compro)",
       "Desain UI/UX Eksklusif",
       "Halaman About, Service, Gallery",
       "Integrasi WhatsApp & Maps",
       "SEO Friendly & Responsive",
-      "Garansi Maintenance & Support",
+      "Garansi Maintenance 3 Bulan & Support",
     ],
     cta: "Mulai Sekarang",
     ctaHref: "https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20paket%20Business.",
@@ -154,7 +154,7 @@ export const agencyPricingPlans = [
     tag: "Best Value",
     features: [
       "Free Domain & Hosting (1 Thn)",
-      "Garansi 3x Revisi Gratis",
+      "Garansi 5x Revisi Gratis & Maintenance 3 Bulan",
       "Dashboard CMS (Mudah Edit)",
       "Bisa Tambah/Edit Konten Sendiri",
       "System Blog / Berita Dinamis",
@@ -173,7 +173,7 @@ export const agencyPricingPlans = [
     tag: "Popular",
     features: [
       "Free Domain & Hosting (1 Thn)",
-      "Garansi 3x Revisi Gratis",
+      "Garansi 5x Revisi Gratis & Maintenance 3 Bulan",
       "Katalog Produk & Detail",
       "Fitur Keranjang & Checkout WA",
       "Admin Dashboard Kelola Produk",
@@ -311,8 +311,8 @@ export const features = [
     description: "Mulai dari Rp 500 Ribuan tanpa biaya tersembunyi. Solusi hemat berkualitas tinggi untuk UMKM & Startup.",
   },
   {
-    title: "Garansi Free 3x Revisi",
-    description: "Bebas minta penyesuaian desain & konten hingga 3x revisi sampai hasilnya sesuai ekspektasi Anda.",
+    title: "Garansi Free 5x Revisi",
+    description: "Bebas minta penyesuaian desain & konten hingga 5x revisi serta gratis maintenance 3 bulan.",
   },
   {
     title: "Gratis Domain & Hosting",

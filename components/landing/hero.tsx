@@ -1,15 +1,10 @@
-function StatCard({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="group rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 backdrop-blur-xl transition-all duration-300 hover:border-indigo-500/40 hover:bg-white/[0.06] hover:shadow-[0_15px_30px_rgba(99,102,241,0.15)]">
-      <div className="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-indigo-300 transition">{value}</div>
-      <div className="text-xs font-medium text-slate-400 mt-1">{label}</div>
-    </div>
-  );
-}
+"use client";
+
+import { CodeIcon, CustomLayoutIcon, DesignIcon, DomainIcon, ZapSpeedIcon } from "./icons";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-[#040316] py-16 text-white sm:py-24 lg:py-28 bg-grid-pattern">
+    <section id="home" className="relative overflow-hidden bg-[#040316] py-16 text-white sm:py-24 lg:py-28 border-b border-white/10">
       {/* Ambient Lighting & Glow Effects */}
       <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[35rem] w-[50rem] rounded-full bg-gradient-to-tr from-indigo-600/25 via-purple-600/20 to-cyan-400/15 blur-[140px] animate-float-slow" />
       <div className="pointer-events-none absolute top-1/3 -right-20 h-80 w-80 rounded-full bg-indigo-500/10 blur-[100px] animate-float-reverse" />
@@ -17,12 +12,12 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
         {/* Left Hero Content */}
         <div className="max-w-xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.2)] backdrop-blur-md animate-pulse-glow">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.2)] backdrop-blur-md">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
             </span>
-            SOLUSI DIGITAL
+            SOLUSI DIGITAL TERPERCAYA
           </div>
 
           <h1 className="text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -33,24 +28,10 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-lg text-base leading-8 text-slate-300 sm:text-lg">
-            Bangun website & aplikasi kustom berstandar tinggi untuk bisnis Anda, serta layanan Joki Tugas IT, Skripsi, & Project Koding terpercaya.
+            Bangun website &amp; aplikasi kustom berstandar tinggi untuk bisnis Anda, serta layanan Joki Tugas IT, Skripsi, &amp; Project Koding terpercaya.
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-xs font-bold text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.2)] transition hover:scale-105">
-              <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
-              Mulai Rp 500 Ribuan • Free Domain & Hosting
-            </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-xs font-bold text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.2)] transition hover:scale-105">
-              <span className="flex h-2 w-2 rounded-full bg-indigo-400 animate-pulse" />
-              Garansi 3x Revisi Gratis
-            </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2 text-xs font-bold text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.2)] transition hover:scale-105">
-              <span className="flex h-2 w-2 rounded-full bg-purple-400 animate-pulse" />
-              🎓 Joki Tugas IT, Skripsi & TA
-            </div>
-          </div>
-
+          {/* Action CTAs */}
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
               href="https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20gratis."
@@ -60,16 +41,10 @@ export function Hero() {
             >
               Konsultasi Gratis <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
-            <a
-              href="#portfolio"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-7 py-4 text-sm font-bold text-white backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:border-white/30 hover:bg-white/[0.08]"
-            >
-              Lihat Portfolio
-            </a>
           </div>
         </div>
 
-        {/* Right Dual Device Mockup (MacBook Laptop + Realistic iPhone Smartphone) */}
+        {/* Right Dual Device Mockup (MacBook Laptop + Smartphone) */}
         <div className="relative pt-6 pb-12 sm:py-0">
           {/* Ambient Glow behind Devices */}
           <div className="pointer-events-none absolute -inset-6 rounded-[3.5rem] bg-gradient-to-tr from-indigo-500/25 via-purple-500/20 to-cyan-500/15 blur-3xl animate-pulse-slow" />
@@ -114,31 +89,37 @@ export function Hero() {
                   </div>
 
                   <div className="rounded-2xl border border-indigo-500/30 bg-gradient-to-r from-indigo-950/70 to-slate-900/90 p-4 shadow-xl">
-                    <div className="text-[10px] font-black uppercase tracking-wider text-indigo-400">LIVE PREVIEW STATUS</div>
-                    <div className="mt-1 text-base sm:text-lg font-black text-white">Custom Web & Mobile Development</div>
+                    <div className="text-[10px] font-black uppercase tracking-wider text-indigo-400">STUDIO SHOWCASE</div>
+                    <div className="mt-1 text-base sm:text-lg font-black text-white">Custom Web &amp; Mobile Development</div>
                     <div className="mt-3 grid grid-cols-3 gap-2 text-center">
                       <div className="rounded-xl bg-white/5 p-2 border border-white/10">
-                        <div className="text-[9px] text-slate-400 font-medium">PageSpeed</div>
-                        <div className="text-xs sm:text-sm font-black text-emerald-400">100/100</div>
+                        <div className="text-[9px] text-slate-400 font-medium">Garansi</div>
+                        <div className="text-xs sm:text-sm font-black text-emerald-400">Free 5x Revisi</div>
                       </div>
-                      <div className="rounded-lg bg-white/5 p-2 border border-white/10">
-                        <div className="text-[9px] text-slate-400 font-medium">Load Time</div>
-                        <div className="text-xs sm:text-sm font-black text-cyan-300">0.4s</div>
+                      <div className="rounded-xl bg-white/5 p-2 border border-white/10">
+                        <div className="text-[9px] text-slate-400 font-medium">Maintenance</div>
+                        <div className="text-xs sm:text-sm font-black text-cyan-300">Free 3 Bulan</div>
                       </div>
-                      <div className="rounded-lg bg-white/5 p-2 border border-white/10">
-                        <div className="text-[9px] text-slate-400 font-medium">SEO Score</div>
-                        <div className="text-xs sm:text-sm font-black text-purple-300">Optimal</div>
+                      <div className="rounded-xl bg-white/5 p-2 border border-white/10">
+                        <div className="text-[9px] text-slate-400 font-medium">SEO &amp; Speed</div>
+                        <div className="text-xs sm:text-sm font-black text-purple-300">100/100</div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2 text.xs">
+                  <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="rounded-xl border border-white/10 bg-white/5 p-2.5 flex items-center justify-between">
-                      <span className="text-[11px] text-slate-300 font-bold">✨ UI/UX Kustom</span>
+                      <span className="text-[11px] text-slate-300 font-bold flex items-center gap-1.5">
+                        <DesignIcon className="h-3.5 w-3.5 text-amber-300 shrink-0" />
+                        UI/UX Kustom
+                      </span>
                       <span className="text-emerald-400 font-bold text-xs">✓</span>
                     </div>
                     <div className="rounded-xl border border-white/10 bg-white/5 p-2.5 flex items-center justify-between">
-                      <span className="text-[11px] text-slate-300 font-bold">⚡ Clean Code</span>
+                      <span className="text-[11px] text-slate-300 font-bold flex items-center gap-1.5">
+                        <CodeIcon className="h-3.5 w-3.5 text-cyan-300 shrink-0" />
+                        Clean Code
+                      </span>
                       <span className="text-emerald-400 font-bold text-xs">✓</span>
                     </div>
                   </div>
@@ -191,7 +172,7 @@ export function Hero() {
 
                 <div className="rounded-xl bg-gradient-to-br from-indigo-950/80 via-slate-900 to-purple-950/80 p-2.5 text-center border border-indigo-500/30 shadow-lg">
                   <div className="text-[10px] font-black text-white">100% Mobile Responsive</div>
-                  <p className="mt-1 text-[8px] text-slate-300 leading-tight">Solusi Digital Cepat & Sleek di HP</p>
+                  <p className="mt-1 text-[8px] text-slate-300 leading-tight">Free 5x Revisi &amp; 3 Bln Maintenance</p>
                   <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-2 py-0.5 text-[8px] font-extrabold text-emerald-300 border border-emerald-500/30">
                     <span className="h-1 w-1 rounded-full bg-emerald-400 animate-ping" />
                     <span>Instant Load 0.4s</span>
@@ -200,11 +181,17 @@ export function Hero() {
 
                 <div className="space-y-1.5 text-[9px]">
                   <div className="rounded-lg border border-white/10 bg-white/5 p-2 flex items-center justify-between">
-                    <span className="text-slate-300 font-semibold">📱 Mobile Native UI</span>
+                    <span className="text-slate-300 font-semibold flex items-center gap-1">
+                      <CustomLayoutIcon className="h-3 w-3 text-indigo-300 shrink-0" />
+                      Mobile Native UI
+                    </span>
                     <span className="text-emerald-400 font-black">✓</span>
                   </div>
                   <div className="rounded-lg border border-white/10 bg-white/5 p-2 flex items-center justify-between">
-                    <span className="text-slate-300 font-semibold">⚡ Fast Performance</span>
+                    <span className="text-slate-300 font-semibold flex items-center gap-1">
+                      <ZapSpeedIcon className="h-3 w-3 text-amber-300 shrink-0" />
+                      Fast Performance
+                    </span>
                     <span className="text-emerald-400 font-black">✓</span>
                   </div>
                 </div>
@@ -219,27 +206,26 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Trust & Stats Footer Banner */}
-      <div className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-6 backdrop-blur-xl shadow-2xl">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between border-b border-white/10 pb-6 mb-6">
-            <div className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400">
-              SOLUSI DIGITAL TERPERCAYA UNTUK BISNIS & MAHASISWA
+      {/* Editorial Metrics & Trust Strip */}
+      <div className="mt-20 border-t border-white/10 pt-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            <div>
+              <div className="text-3xl font-black tracking-tight text-white lg:text-4xl">50+</div>
+              <p className="mt-1 text-xs text-slate-400">Project Website &amp; Application Success</p>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {["UMKM Modern", "Startup", "Personal Brand", "Enterprise", "Tugas IT & Skripsi"].map((item) => (
-                <span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs font-semibold text-slate-300">
-                  {item}
-                </span>
-              ))}
+            <div>
+              <div className="text-3xl font-black tracking-tight text-indigo-400 lg:text-4xl">3-7 Hari</div>
+              <p className="mt-1 text-xs text-slate-400">Rata-rata Waktu Pengerjaan Kilat</p>
             </div>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <StatCard value="Fast Delivery" label="Pengerjaan Kilat 3-7 Hari Kerja" />
-            <StatCard value="Harga Terjangkau" label="Mulai Rp 500rb & Promo Rilis" />
-            <StatCard value="100% Responsive" label="Tampilan Rapi di HP & Desktop" />
-            <StatCard value="Garansi Support" label="Free 3x Revisi & Pendampingan" />
+            <div>
+              <div className="text-3xl font-black tracking-tight text-emerald-400 lg:text-4xl">100%</div>
+              <p className="mt-1 text-xs text-slate-400">Garansi Source Code Hak Milik Anda</p>
+            </div>
+            <div>
+              <div className="text-3xl font-black tracking-tight text-purple-400 lg:text-4xl">Free 5x</div>
+              <p className="mt-1 text-xs text-slate-400">Revisi &amp; Free 3 Bulan Maintenance</p>
+            </div>
           </div>
         </div>
       </div>

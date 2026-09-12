@@ -18,61 +18,230 @@ import {
   StarIcon, 
   SupportIcon, 
   WhatsAppIcon, 
-  ZapSpeedIcon 
+  ZapSpeedIcon,
+  BuildingIcon,
+  AcademicIcon,
+  AlertTriangleIcon,
+  ZapIcon,
+  ShieldIcon,
+  LockIcon 
 } from "./icons";
 import { agencyPricingPlans, faqCategories, features, projectCards, serviceItems, studentPricingPlans, testimonials, type ServiceItem, type PricingCategory } from "./data";
 
 export function ProblemSection() {
+  const [activeAudience, setActiveAudience] = useState<"bisnis" | "student">("bisnis");
+
   return (
     <section id="layanan" className="relative overflow-hidden bg-[#040316] py-24 text-white border-t border-white/10">
-      {/* Grid pattern background */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
-
-      {/* Radial Ambient Mesh Glows with Float Animation */}
-      <div className="pointer-events-none absolute -top-32 right-[-5%] h-[30rem] w-[30rem] rounded-full bg-gradient-to-br from-indigo-600/25 to-purple-600/15 blur-[140px] animate-float-slow" />
-      <div className="pointer-events-none absolute bottom-[-10%] left-[-5%] h-[28rem] w-[28rem] rounded-full bg-rose-600/10 blur-[130px] animate-float-reverse" />
+      {/* Mesh & Subtle Grid Overlay */}
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[45rem] w-[70rem] rounded-full bg-gradient-to-tr from-indigo-600/15 via-purple-600/10 to-cyan-500/10 blur-[150px]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 max-w-2xl">
-          <p className="text-xs font-black uppercase tracking-[0.25em] text-indigo-400">TANTANGAN BISNIS</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
-            Bisnis Anda Sudah Siap Go Digital?
-          </h2>
-        </div>
-
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="space-y-4 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 backdrop-blur-xl transition-all duration-300 hover:border-white/20">
-            {[
-              "Belum punya website & kredibilitas brand di internet",
-              "Website lama lambat, tidak responsive, dan sulit di-update",
-              "Proses operasional & transaksi masih manual",
-              "Kesulitan menjangkau calon pelanggan potensial secara online",
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3.5 rounded-2xl border border-rose-500/20 bg-rose-500/5 p-4 transition-all duration-300 hover:scale-[1.01] hover:border-rose-500/40 hover:bg-rose-500/10">
-                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-rose-500/20 text-rose-300 font-bold text-xs">
-                  ✕
-                </span>
-                <span className="text-sm font-medium text-slate-300">{item}</span>
-              </div>
-            ))}
+        {/* Section Header with Audience Switcher */}
+        <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.2em] text-rose-300">
+              <span className="h-2 w-2 rounded-full bg-rose-400 animate-ping" />
+              IDENTIFIKASI KEBUTUHAN PROJECT
+            </div>
+            <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-5xl">
+              Hentikan Kendala Digital,
+              <span className="mt-1 block bg-gradient-to-r from-indigo-300 via-purple-200 to-cyan-300 bg-clip-text text-transparent">
+                Drama &amp; Stagnasi.
+              </span>
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-slate-300 sm:text-base">
+              Bermasalah dengan website lama yang lambat, atau stuck pengerjaan Tugas IT/Skripsi? Pilih kategori Anda di bawah:
+            </p>
           </div>
 
-          <div className="rounded-[2rem] border border-indigo-500/30 bg-gradient-to-br from-indigo-950/60 via-slate-950 to-slate-950 p-6 backdrop-blur-2xl shadow-[0_20px_50px_rgba(79,70,229,0.15)] sm:p-8 transition-all duration-300 hover:border-indigo-500/50 hover:shadow-[0_25px_60px_rgba(79,70,229,0.25)]">
-            <p className="text-xs font-black uppercase tracking-[0.25em] text-indigo-400">SOLUSI PROJEKIN</p>
-            <h3 className="mt-3 text-2xl font-black text-white sm:text-3xl">
-              Kami ubah tantangan bisnis Anda menjadi produk digital modern yang terukur & berkinerja tinggi.
-            </h3>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {[
-                ["STRATEGY", "Pemetaan fitur & arsitektur data bisnis"],
-                ["DESIGN", "UI/UX kustom, estetis, & conversion-focused"],
-                ["LAUNCH", "Kode bersih, cepat, & mudah di-scale"],
-              ].map(([title, description]) => (
-                <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition-all duration-300 hover:scale-105 hover:border-indigo-400/40 hover:bg-white/[0.08]">
-                  <div className="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-indigo-400">{title}</div>
-                  <p className="text-xs leading-5 text-slate-300">{description}</p>
+          {/* Interactive Audience Switcher Pill */}
+          <div className="inline-flex shrink-0 items-center rounded-2xl border border-white/15 bg-slate-900/90 p-1.5 backdrop-blur-xl shadow-xl">
+            <button
+              onClick={() => setActiveAudience("bisnis")}
+              className={`flex items-center gap-2 rounded-xl px-5 py-2.5 text-xs font-black transition-all duration-300 ${
+                activeAudience === "bisnis"
+                  ? "bg-indigo-600 text-white shadow-[0_0_20px_rgba(99,102,241,0.5)] scale-105"
+                  : "text-slate-400 hover:text-white"
+              }`}
+            >
+              <BuildingIcon className="h-4 w-4 text-indigo-200" />
+              <span>Klien Bisnis &amp; UMKM</span>
+            </button>
+            <button
+              onClick={() => setActiveAudience("student")}
+              className={`flex items-center gap-2 rounded-xl px-5 py-2.5 text-xs font-black transition-all duration-300 ${
+                activeAudience === "student"
+                  ? "bg-emerald-600 text-white shadow-[0_0_20px_rgba(16,185,129,0.5)] scale-105"
+                  : "text-slate-400 hover:text-white"
+              }`}
+            >
+              <AcademicIcon className="h-4 w-4 text-emerald-200" />
+              <span>Mahasiswa Skripsi &amp; IT</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Dynamic Studio Comparison Layout */}
+        <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
+          {/* Left Column: Pain Points (Masalah Dihadapi) */}
+          <div className="flex flex-col justify-between rounded-[2.5rem] border border-rose-500/20 bg-gradient-to-b from-rose-950/20 via-slate-950 to-slate-950 p-6 sm:p-8 backdrop-blur-xl transition-all duration-300">
+            <div>
+              <div className="flex items-center justify-between mb-6 border-b border-rose-500/20 pb-4">
+                <div className="flex items-center gap-2.5 text-rose-400 font-bold text-xs uppercase tracking-wider">
+                  <span className="flex h-2.5 w-2.5 rounded-full bg-rose-500 animate-ping" />
+                  <span>Sering Menghambat Kemajuan Anda</span>
                 </div>
-              ))}
+                <span className="rounded-full bg-rose-500/10 px-2.5 py-0.5 text-[10px] font-mono text-rose-300 border border-rose-500/20">
+                  PROBLEM DIAGNOSIS
+                </span>
+              </div>
+
+              <div className="space-y-4">
+                {activeAudience === "bisnis" ? (
+                  <>
+                    <div className="group rounded-2xl border border-rose-500/15 bg-rose-500/5 p-4 transition duration-300 hover:bg-rose-500/10">
+                      <div className="flex items-center gap-2 text-xs font-bold text-rose-300 mb-1">
+                        <AlertTriangleIcon className="h-4 w-4 text-rose-400 shrink-0" />
+                        <span>Website Lambat &amp; Tampilan Jadul</span>
+                      </div>
+                      <p className="text-xs text-slate-300 leading-relaxed pl-6">
+                        Calon pembeli kabur karena web susah diakses dari smartphone dan tidak terpercaya.
+                      </p>
+                    </div>
+
+                    <div className="group rounded-2xl border border-rose-500/15 bg-rose-500/5 p-4 transition duration-300 hover:bg-rose-500/10">
+                      <div className="flex items-center gap-2 text-xs font-bold text-rose-300 mb-1">
+                        <AlertTriangleIcon className="h-4 w-4 text-rose-400 shrink-0" />
+                        <span>Transaksi &amp; Operasional Manual</span>
+                      </div>
+                      <p className="text-xs text-slate-300 leading-relaxed pl-6">
+                        Kerepotan mencatat pesanan, tidak ada katalog otomatis, dan boros waktu admin.
+                      </p>
+                    </div>
+
+                    <div className="group rounded-2xl border border-rose-500/15 bg-rose-500/5 p-4 transition duration-300 hover:bg-rose-500/10">
+                      <div className="flex items-center gap-2 text-xs font-bold text-rose-300 mb-1">
+                        <AlertTriangleIcon className="h-4 w-4 text-rose-400 shrink-0" />
+                        <span>Developer Lama Slow-Response</span>
+                      </div>
+                      <p className="text-xs text-slate-300 leading-relaxed pl-6">
+                        Ditinggal lepas tangan tanpa garansi maintenance saat terjadi error atau butuh update.
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="group rounded-2xl border border-rose-500/15 bg-rose-500/5 p-4 transition duration-300 hover:bg-rose-500/10">
+                      <div className="flex items-center gap-2 text-xs font-bold text-rose-300 mb-1">
+                        <AlertTriangleIcon className="h-4 w-4 text-rose-400 shrink-0" />
+                        <span>Stagnan Skripsi &amp; TA IT</span>
+                      </div>
+                      <p className="text-xs text-slate-300 leading-relaxed pl-6">
+                        Bingung koding program aplikasi skripsi &amp; sering revisi algoritma oleh dosen pembimbing.
+                      </p>
+                    </div>
+
+                    <div className="group rounded-2xl border border-rose-500/15 bg-rose-500/5 p-4 transition duration-300 hover:bg-rose-500/10">
+                      <div className="flex items-center gap-2 text-xs font-bold text-rose-300 mb-1">
+                        <AlertTriangleIcon className="h-4 w-4 text-rose-400 shrink-0" />
+                        <span>Tugas Koding Praktikum Menumpuk</span>
+                      </div>
+                      <p className="text-xs text-slate-300 leading-relaxed pl-6">
+                        Deadline UTS/UAS makin dekat tapi syntax error dan bingung logika koding.
+                      </p>
+                    </div>
+
+                    <div className="group rounded-2xl border border-rose-500/15 bg-rose-500/5 p-4 transition duration-300 hover:bg-rose-500/10">
+                      <div className="flex items-center gap-2 text-xs font-bold text-rose-300 mb-1">
+                        <AlertTriangleIcon className="h-4 w-4 text-rose-400 shrink-0" />
+                        <span>Takut Plagiarisme &amp; Tidak Paham Code</span>
+                      </div>
+                      <p className="text-xs text-slate-300 leading-relaxed pl-6">
+                        Hasil koding asal-asalan dari template umum tanpa penjelasan logika untuk sidang.
+                      </p>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+
+            <div className="mt-6 border-t border-rose-500/20 pt-4 flex items-center justify-between text-xs text-rose-300/80">
+              <span>Efek: Membuang waktu &amp; biaya</span>
+              <span className="font-mono font-bold text-rose-400">STATUS: RISKY</span>
+            </div>
+          </div>
+
+          {/* Right Column: PROJEKIN Studio Solution (Hasil Studio) */}
+          <div className="relative flex flex-col justify-between rounded-[2.5rem] border border-indigo-500/40 bg-gradient-to-br from-indigo-950/80 via-slate-900/90 to-slate-950 p-6 sm:p-8 backdrop-blur-2xl shadow-[0_25px_60px_rgba(99,102,241,0.2)]">
+            <div className="pointer-events-none absolute -inset-0.5 rounded-[2.5rem] bg-gradient-to-r from-indigo-500/20 to-emerald-500/20 blur-xl opacity-60" />
+
+            <div className="relative">
+              <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
+                <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider">
+                  <span className="flex h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>STANDAR EKSEKUSI PROJEKIN</span>
+                </div>
+                <span className="rounded-full bg-emerald-500/20 px-3 py-1 text-[10px] font-extrabold text-emerald-300 border border-emerald-500/30">
+                  GUARANTEED SOLUTION
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-black text-white sm:text-3xl leading-snug">
+                {activeAudience === "bisnis"
+                  ? "Website Sleek, High-Speed &amp; Bebas Biaya Server 1 Tahun."
+                  : "Program Skripsi Clean Code + Penjelasan Logika Siap Sidang."}
+              </h3>
+
+              <p className="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                {activeAudience === "bisnis"
+                  ? "Dikerjakan langsung oleh developer berpengalaman menggunakan Next.js/Laravel, gratis domain &amp; hosting, garansi 5x revisi, serta maintenance 3 bulan."
+                  : "Kode dibuat rapi tanpa plagiarisme, disertai dokumentasi &amp; pendampingan penjelasan koding via Zoom/Meet sampai lulus."}
+              </p>
+
+              {/* Action Feature Highlights */}
+              <div className="mt-6 grid grid-cols-3 gap-3">
+                <div className="rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur-md">
+                  <div className="flex items-center gap-1.5 text-[10px] font-black text-indigo-300 uppercase">
+                    <ZapIcon className="h-3.5 w-3.5 text-amber-300 shrink-0" />
+                    <span>EXPRESSED</span>
+                  </div>
+                  <div className="mt-1 text-[11px] text-slate-300 leading-tight font-medium">Selesai 3-7 Hari Kerja</div>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur-md">
+                  <div className="flex items-center gap-1.5 text-[10px] font-black text-indigo-300 uppercase">
+                    <ShieldIcon className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
+                    <span>GARANSI</span>
+                  </div>
+                  <div className="mt-1 text-[11px] text-slate-300 leading-tight font-medium">Free 5x Revisi &amp; 3 Bln Maint.</div>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur-md">
+                  <div className="flex items-center gap-1.5 text-[10px] font-black text-indigo-300 uppercase">
+                    <LockIcon className="h-3.5 w-3.5 text-cyan-300 shrink-0" />
+                    <span>CONFIDENTIAL</span>
+                  </div>
+                  <div className="mt-1 text-[11px] text-slate-300 leading-tight font-medium">Source Code Hak Milik</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Direct Studio CTA Button */}
+            <div className="relative mt-8 border-t border-white/10 pt-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <div className="text-xs font-bold text-white">Konsultasikan Project Anda</div>
+                <div className="text-[11px] text-slate-400">Respon kilat WhatsApp &lt; 1 Jam</div>
+              </div>
+              <a
+                href={`https://wa.me/6285766935413?text=Halo%20PROJEKIN%2C%20saya%20ingin%20konsultasi%20mengenai%20${
+                  activeAudience === "bisnis" ? "Project%20Website%20Bisnis" : "Joki%20Tugas%20IT%20%2F%20Skripsi"
+                }`}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-500 px-6 py-3 text-xs font-black uppercase tracking-wider text-white shadow-[0_0_25px_rgba(16,185,129,0.4)] transition hover:scale-105 active:scale-95"
+              >
+                <span>Tanya Solusi WA</span>
+                <span>→</span>
+              </a>
             </div>
           </div>
         </div>
